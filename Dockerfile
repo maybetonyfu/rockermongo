@@ -5,12 +5,9 @@ MAINTAINER tony fu
 # Install Dev Tools
 RUN apt-get update -yq              && \     
     apt-get install -yq                \
-        build-essential                \
         apache2                        \
-        php5                           \
-        libapache2-mod-php5            \
         php5-dev                       \
-        php-pear                       \
+        libapache2-mod-php5            \
         wget                           \
         unzip
 
