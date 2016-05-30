@@ -13,18 +13,41 @@ To connect to a mongo database from localhost, simply run
 
 To connect to a mongo container, either use the good old link flag
 ```
-docker run --detach --name mongodb  mongo
-docker run --detach --name rockermongo --link mongodb:mongo --env MONGO_HOST=mongo --publish 80:80 tonysickpon/rockermongo
+docker run 
+      --detach \
+      --name mongodb  mongo
+docker run \
+      --detach \
+      --name rockermongo \
+      --link mongodb:mongo \
+      --env MONGO_HOST=mongo \
+      --publish 80:80 \
+      tonysickpon/rockermongo
 ```
 or use the docker network
 ```
-docker run --detach --name mongo --net my_network mongo
-docker run --detach --name rockermongo --net my_network --env MONGO_HOST=mongo --publish 80:80 tonysickpon/rockermongo
+docker run \
+      --detach \
+      --name mongo \
+      --net my_network \
+      mongo
+docker run \
+      --detach \
+      --name rockermongo \
+      --net my_network \
+      --env MONGO_HOST=mongo \
+      --publish 80:80 \
+      tonysickpon/rockermongo
 ```
 
 To connect to a url, run
 ```
-docker run --detach --name rockermongo --env MONGO_HOST=[remote url] --publish 80:80 tonysickpon/rockermongo
+docker run \
+      --detach \
+      --name rockermongo \
+      --env MONGO_HOST=[remote url] \
+      --publish 80:80 \
+      tonysickpon/rockermongo
 ```
 
 ## SET PASSWORD
