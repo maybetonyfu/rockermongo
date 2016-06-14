@@ -39,4 +39,7 @@ RUN wget ${RM_URL} -O rockmongo.zip && \
 # Install Rockmongo Configuration
 COPY config.php ./config.php
 
+EXPOSE 80
+EXPOSE 443
+
 CMD ["apache2", "-D", "FOREGROUND"]
