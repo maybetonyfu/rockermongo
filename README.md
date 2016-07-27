@@ -8,7 +8,7 @@ Dockerization of excellent mongodb UI rockmongo http://rockmongo.com/
 ## RUN
 
 To connect to a mongo database from localhost, simply run
-`docker run --detach --name rockermongo --env MONGO_HOST=localhost --env MONGO_PORT=27017 --publish 80:80 tonysickpon/rockermongo`
+`docker run --detach --name rockermongo --env MONGO_HOST=localhost --env MONGO_PORT=27017 --publish 80:80 tonysickpony/rockermongo`
 
 
 To connect to a mongo container, either use the good old link flag
@@ -22,7 +22,7 @@ docker run \
       --link mongodb:mongo \
       --env MONGO_HOST=mongo \
       --publish 80:80 \
-      tonysickpon/rockermongo
+      tonysickpony/rockermongo
 ```
 or use the docker network
 ```
@@ -37,7 +37,7 @@ docker run \
       --net my_network \
       --env MONGO_HOST=mongo \
       --publish 80:80 \
-      tonysickpon/rockermongo
+      tonysickpony/rockermongo
 ```
 
 To connect to a url, run
@@ -47,7 +47,7 @@ docker run \
       --name rockermongo \
       --env MONGO_HOST=[remote url] \
       --publish 80:80 \
-      tonysickpon/rockermongo
+      tonysickpony/rockermongo
 ```
 
 ## SET PASSWORD
