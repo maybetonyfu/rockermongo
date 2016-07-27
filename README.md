@@ -26,6 +26,7 @@ docker run \
 ```
 or use the docker network
 ```
+docker network create my_network
 docker run \
       --detach \
       --name mongo \
